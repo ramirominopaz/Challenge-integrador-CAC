@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito | FunkShop</title>
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header>
@@ -29,13 +29,79 @@
     </header>
 
     <main>
-        <section class="cart">
-            <h2>CARRITO DE COMPRAS</h2>
+        <section class="cart container">
+            <h2 class="cart__title">CARRITO DE COMPRAS</h2>
+            <div class="cart__header">
+                <p>DETALLE DE PRODUCTO</p>
+                <p>CANTIDAD</p>
+                <p>TOTAL</p>
+            </div>
+
+            <div class="cart__item container">
+                <section class="cart__item-selected">
+                    <picture class="item__cover">
+                        <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura de Yoda">
+                    </picture>
+                    <article class="item__content">
+                        <h2 class="item__name">BABY YODA BLUEBALL</h2>
+                        <p class="item__license">STAR WARS</p>
+                        <p class="item__price">Precio unitario: $ 1799,99</p>
+                    </article>
+                </section>
+
+                <section class="cart__item-amount">
+                    <form class="to-cart" action="">
+                        <input class="to-cart__input" type="number" size="6" min="1">
+                    </form>
+                </section>
+
+                <section class="cart__item-price">
+                    <p class="total-price">$3559,98</p>
+                </section>
+            </div>
+            
+            <div class="cart__item container">
+                <section class="cart__item-selected">
+                    <picture class="item__cover">
+                        <img src="../img/pokemon/pidgeotto-1.webp" alt="Figura de Pokemon">
+                    </picture>
+                    <article class="item__content">
+                        <h2 class="item__name">PIDGEOTTO</h2>
+                        <p class="item__license">POKEMON</p>
+                        <p class="item__price">Precio unitario: $ 1799,99</p>
+                    </article>
+                </section>
+
+                <section class="cart__item-amount">
+                    <form class="to-cart" action="">
+                        <input class="to-cart__input" type="number" size="6" min="1">
+                    </form>
+                </section>
+
+                <section class="cart__item-price">
+                    <p class="total-price">$3559,98</p>
+                </section>
+            </div>          
 
         </section>
 
-        <section class="resume">
-            <h2>RESUMEN</h2>
+        <section class="resume container">
+            <h2 class="resume__title">RESUMEN</h2>
+            <div class="resume__content">
+                <div class="resume__content-type">
+                    <p>CANTIDAD DE ELEMENTOS</p>
+                    <p>SUBTOTAL</p>
+                    <p>ENVIO</p>
+                    <p>TOTAL</p>
+                </div>
+                <div class="resume__content-number">
+                    <p>3</p>
+                    <p>$5,399,97</p>
+                    <p>$0,00</p>
+                    <p>$5,399,97</p>
+                </div>
+            </div>
+
         </section>
     </main>
 

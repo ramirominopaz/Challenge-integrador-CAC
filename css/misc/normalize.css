@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%;
+    color: var(--dark-solid);
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+header,
+footer {
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+input[type="text"]::placeholder {
+    color: var(--dark-300);
+    font-family: var(--base-font);
+    font-weight: 500;
+}
+
+
+p {
+    font-size: 1.8em;
+}
+
+/* Extra */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-fixed {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}

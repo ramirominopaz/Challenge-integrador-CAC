@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item | FunkShop</title>
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header>
@@ -38,9 +38,13 @@
                 <h2 class="item__name">BABY YODA BLUEBALL</h2>
                 <P class="item__text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</P>
                 <p class="item__price">$ 1799,99</p>
-                <form class="to-cart" action="">
-                    <input class="to-cart__input" type="number" size="6">
-                    <input class="to-cart__submit" type="submit" value="Agregar al carrito">
+                <form class="to-cart" action="">   
+                    <div class="item__quantity-selector">
+                        <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0">
+                        <button id="add" class="item__quantity-add" type="button">+</button>
+                        <button id="subtract" class="item__quantity-substract" type="button">-</button>
+                    </div>                
+                    <button class="to-cart__submit btn btn--primary btn--medium" type="submit">Agregar al carrito</button>
                 </form>
                 <a class="item__promo" href="">Ver metodos de pago - 3 Cuotas sin interés</a>       
             </article>
