@@ -1,0 +1,67 @@
+#edit{
+    margin: var(--spacing-36) auto;
+}
+
+.edit__title{
+font-size: var(--font-xlarge);
+
+}
+
+.form{
+display: flex;
+max-width: 60%;
+
+}
+
+.form__block{
+padding: var(--spacing-12) 0;
+font-family: var(--base-font);
+display: flex;
+align-items: center;
+gap: var(--spacing-12);
+
+}
+
+.form__label{
+font-size: var(--font-medium);
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+.form__input{
+padding: 1rem 0.5rem;
+border: none;
+flex-grow: 1;
+border-bottom: 2px solid #ff3333;
+font-size: var(--font-medium);
+}
+
+.form__select {
+border-radius: 6px;
+border: 2px solid var(--dark-solid);
+font-size: var(--font-medium);
+padding: var(--spacing-8);
+}
+
+textarea{
+width: 100%;
+}
+
+textarea::placeholder {
+padding: var(--spacing-8);
+color: gainsboro;
+}
+
+
+
+
+.submit-button,
+.reset-button{
+font-size: var(--font-xsmall);
+border: none;
+cursor: pointer;
+background-color: var(--primary-solid);
+color: var(--light-font-solid);
+transition: background 0.2s ease-in-out;
+padding: var(--spacing-12) var(--spacing-28);
+}

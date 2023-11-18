@@ -45,6 +45,7 @@
 
 .resume {
     width: 50%;
+    padding-bottom: var(--spacing-36);
 }
 
 .resume__title {

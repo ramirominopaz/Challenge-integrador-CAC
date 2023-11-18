@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | FunkShop</title>
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="../../index.html"><img src="../../img/branding/logo_light_horizontal.svg" alt="Logo"></a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a class="navbar__link" href="../shop.html">VER TIENDA</a></il>
+                <li class="navbar__item"><a class="navbar__link" href="admin.html">ADMIN</a></il>
+                <li class="navbar__item"><a class="navbar__link" href="../../index.html">SALIR</a></il>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="register">
+
+        <div class="register container">
+            <h2 class="register__title">CREA TU CUENTA</h2>
+            <p class="register__text">Completa el fomulario para ser parte del mundo de los Funkos</p>
+            <div class="register__form">
+                <form  method="post" id="register-form">
+                    <div class="register-form">
+                        <span class="register-form__label" for="r-name">Nombre:</span>
+                        <input class="register-form__input" type="text" name="r-name" required placeholder="Jhon"><br>
+
+                        <span class="register-form__label" for="r-lastname">Apellido:</span>
+                        <input class="register-form__input" type="text" name="r-lastname" required placeholder="Doe"><br>
+
+                        <span class="register-form__label" for="r-email">Email:</span>
+                        <input class="register-form__input" type="email" name="r-email" required placeholder="jhondoe@correo.com"><br>
+
+                        <span class="register-form__label" for="r-password">Contraseña:</span>
+                        <input class="register-form__input" type="password" name="r-password" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;""><br>       
+
+                        <span class="register-form__label" for="r-password__check">Repita Contraseña:</span>
+                        <input class="register-form__input" type="password" name="r-password__check" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    </div>
+                    <div class="register-submit">
+                        <input type="submit" value="Registrarse" form="register-form">
+                        <div class="register-terms">
+                            <input type="checkbox" name="terminos" required>
+                            <span>He leído y acepto los <a href="">Terminos y condiciones</a></span>
+                    </div>
+                </form>
+            </div>
+        </div> 
+
+    </main>
+
+    <footer class="footer">
+        <div class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="../pages/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../contact.html">CONTACTO</a></li>
+            </ul>
+            <picture>
+                <img src="../../img/branding/isotype.svg" alt="Logo">
+            </picture>
+        </div>
+       
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+  
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+</body>
+</html>
