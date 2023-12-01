@@ -1,0 +1,28 @@
+{
+  "name": "codo-a-codo",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador del curso de Desarrollo Web FullStack con Node.Js de CAC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramirominopaz/Challenge-integrador-CAC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramirominopaz/Challenge-integrador-CAC/issues"
+  },
+  "homepage": "https://github.com/ramirominopaz/Challenge-integrador-CAC#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-generator": "^4.2.0",
+    "method-override": "^3.0.0",
+    "path": "^0.12.7"
+  }
+}
