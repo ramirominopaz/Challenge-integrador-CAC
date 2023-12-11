@@ -7,7 +7,10 @@ const shopRoutes = require('./src/routes/shopRoutes.js')    //Aca se importan la
 const path = require('path')
 const port = process.env.PORT || 3000
 
-server.use(express.static(__dirname + 'public'));
+server.set('view engine' , 'ejs');
+server.set('views', path.join(__dirname ,'./src/views' ));
+
+server.use(express.static(__dirname + '/public'));
 server.use('/', mainRoutes); //Aca se le indica que use las rutas de Main 
 server.use('/admin', adminRoutes); //Aca se le indica que use las rutas de Admin
 server.use('/auth', authRoutes); //Aca se le indica que use las rutas de Auth

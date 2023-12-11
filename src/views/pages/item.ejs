@@ -1,46 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item | FunkShop</title>
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../index.html"><img src="../img/branding/logo_light_horizontal.svg" alt="Logo"></a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-                    <ul class="submenu">
-                        <li class="submenu__item"><a href="" class="submenu__link">FUNKO</a></li>
-                        <li class="submenu__item"><a href="" class="submenu__link"></a>REMERA</li>
-                        <li class="submenu__item"><a href="" class="submenu__link"></a>LLAVE</li>
-                    </ul>
-                </il>
-                <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></il>
-                <li class="navbar__item"><a class="navbar__link" href="./admin/login.html">LOGIN</a></il>
-                <li class="navbar__item"><a class="navbar__cart" href="cart.html"><img src="../img/icons/cart-icon.svg" alt="Carrito"></a></il>
-            </ul>
-        </nav>
-    </header>
+
+    <%- include('../partials/headerShop'); -%>
 
     <main>
         <section class="item container">
             <picture class="item__cover">
-                <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura de Yoda">
+                <img class="card-item__img--front" src="../../img<%= item.image_front %>" alt="<%= item.product_description %>">
             </picture>
             <article class="item__content">
-                <p class="item__license">STAR WARS</p>
-                <h2 class="item__name">BABY YODA BLUEBALL</h2>
-                <P class="item__text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</P>
-                <p class="item__price">$ 1799,99</p>
-                <form class="to-cart" action="">   
+                <p class="item__license"><%= item.licence_name %></p>
+                <h2 class="item__name"><%= item.product_name %></h2>
+                <P class="item__text"><%= item.product_description %></P>
+                <p class="item__price"><%= item.product.price %></p>
+                <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">  
                     <div class="item__quantity-selector">
                         <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0">
                         <button id="add" class="item__quantity-add" type="button">+</button>
@@ -61,7 +32,7 @@
                 <ul class="slider__itemss glide__slides">
                     <li class="slider__item glide__slide">
                         <article class="card-item">
-                            <a class="card-item__link" href="">
+                            <a class="card-item__link" href="/shop">
                                 <picture class="card-item__cover">
                                     <span class="card-item__tag">Nuevo</span>
                                     <img class="card-item__img--front" src="../img/star-wars/trooper-1.webp" alt="Figura de StormTrooper">
@@ -79,7 +50,7 @@
                     
                     <li class="slider__item glide__slide">
                         <article class="card-item">
-                            <a class="card-item__link" href="">
+                            <a class="card-item__link" href="/shop">
                                 <picture class="card-item__cover">
                                     <span class="card-item__tag">Nuevo</span>
                                     <img class="card-item__img--front" src="../img/pokemon/pidgeotto-1.webp" alt="Figura de Pokemon">
@@ -97,7 +68,7 @@
                     
                     <li class="slider__item glide__slide">
                         <article class="card-item">
-                            <a class="card-item__link" href="">
+                            <a class="card-item__link" href="/shop">
                                 <picture class="card-item__cover">
                                     <span class="card-item__tag">Nuevo</span>
                                     <img class="card-item__img--front" src="../img/harry-potter/luna-1.webp" alt="Figura de Harry Potter">
@@ -128,22 +99,8 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="navbar container">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="shop.html">SHOP</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./admin/register.html">REGISTRARSE</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./admin/login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <img src="../img/branding/isotype.svg" alt="Logo">
-            </picture>
-        </div>
-       
-        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-  
-    </footer>
+    <%- include('../partials/footer'); -%>
+    
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>

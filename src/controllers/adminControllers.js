@@ -4,12 +4,20 @@ module.exports = {
  
     admin:(req, res)=> {
         console.log('Estamos en admin') 
-        res.send('Esta es la pagina de admin')
+        res.render(path.resolve(__dirname, '../views/pages/admin/admin'), {
+            view: {
+               title: "Admin | Funkoshop"
+           }
+       })
     },
 
     create:(req, res)=> {
         console.log('Estamos en create') 
-        res.send('Esta es la pagina de create')
+        res.render(path.resolve(__dirname, '../views/pages/admin/create'), {
+            view: {
+               title: "Create | Funkoshop"
+           }
+       })
     },
 
     createPost:(req, res)=> {
@@ -19,7 +27,11 @@ module.exports = {
 
     edit:(req, res)=> {
         console.log('Estamos en edit') 
-        res.send('Esta es la pagina de edit')
+        res.render(path.resolve(__dirname, '../views/pages/admin/edit'), {
+            view: {
+               title: "Edit | Funkoshop"
+           }
+       })
     },
 
     editPut:(req, res)=> {

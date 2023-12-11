@@ -7,18 +7,8 @@
     <link rel="stylesheet" href="../../css/index.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html"><img src="../../img/branding/logo_light_horizontal.svg" alt="Logo"></a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item"><a class="navbar__link" href="../shop.html">VER TIENDA</a></il>
-                <li class="navbar__item"><a class="navbar__link" href="admin.html">ADMIN</a></il>
-                <li class="navbar__item"><a class="navbar__link" href="../../index.html">SALIR</a></il>
-            </ul>
-        </nav>
-    </header>
+
+    <%- include('../../partials/headerAdmin'); -%>
 
     <main id="login">
 
@@ -51,22 +41,8 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="navbar container">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="../pages/shop.html">SHOP</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../contact.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <img src="../../img/branding/isotype.svg" alt="Logo">
-            </picture>
-        </div>
-       
-        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-  
-    </footer>
+    <%- include('../../partials/footer'); -%>
+
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 
 </body>

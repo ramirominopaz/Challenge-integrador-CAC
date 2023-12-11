@@ -1,30 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit | FunkShop</title>
-    <link rel="stylesheet" href="../../css/index.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html"><img src="../../img/branding/logo_light_horizontal.svg" alt="Logo"></a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item"><a class="navbar__link" href="../shop.html">VER TIENDA</a></il>
-                <li class="navbar__item"><a class="navbar__link" href="admin.html">ADMIN</a></il>
-                <li class="navbar__item"><a class="navbar__link" href="../../index.html">SALIR</a></il>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="edit">
+    <%- include('../../partials/headerAdmin'); -%>
 
-        <section class="edit-item container">
+    <main id="create">
+        <section class="create-item container">
             
-            <h2 class="edit__title" >EDITAR ITEM</h2>
+            <h2 class="create__title" >CREAR NUEVO ITEM</h2>
             
             <div class="form">
 
@@ -34,18 +14,16 @@
     
                         <label class="form__label" for="category">Categoria:</label>
                         <select class="form__select" name="category" id="category" aria-placeholder="Seleccionar">
-                            <option value="" disabled selected hidden>Seleccionar</option>
-                            <option value="Figuras Coleccionables">Figuras Coleccionables</option>
-                            <option value="Llaveros">Llaveros</option>
-                            <option value="Remeras">Remeras</option>
+                            <% categories.forEach((category, i) => { %>
+                                <option value="<%= i+1%>"><%= category.category_name%></option>
+                              <% }); %>
                         </select>
         
                         <label class="form__label" for="license">Licencia:</label>
                         <select class="form__select" name="license" id="license" aria-placeholder="Seleccionar">
-                            <option value="" disabled selected hidden>Seleccionar</option>
-                            <option value="starwars">Star Wars</option>
-                            <option value="pokemon">Pokemon</option>
-                            <option value="harrypotter">Harry Potter</option>
+                            <% licences.forEach((licence, i) => { %>
+                                <option value="<%= i+1%>"><%= licence.licence_name%></option>
+                              <% }); %>
                         </select>
     
                     </div>
@@ -106,7 +84,8 @@
     
                     <div class="form__block">
     
-                        <input class="submit-button" type="submit" value="Editar Producto">
+                        <input class="submit-button" type="submit" value="Agregar Producto">
+                        <input class="reset-button" class="reset-button" type="reset" value="Limpiar">
     
                     </div>
     
@@ -116,25 +95,10 @@
             </div>
             
         </section>
-
     </main>
 
-    <footer class="footer">
-        <div class="navbar container">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="../pages/shop.html">SHOP</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../contact.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <img src="../../img/branding/isotype.svg" alt="Logo">
-            </picture>
-        </div>
-       
-        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-  
-    </footer>
+    <%- include('../../partials/footer'); -%>
+
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 
 </body>

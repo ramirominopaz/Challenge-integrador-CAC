@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= view.title %></title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar container">
+        <picture class="navbar__logo">
+            <a href="/"><img src="img/branding/logo_light_horizontal.svg" alt="Logo"></a>
+        </picture>
+        <ul class="navbar__menu">
+            <li class="navbar__item with-submenu">
+                <a class="navbar__link with-icon" href="/shop">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="" class="submenu__link">FUNKO</a></li>
+                    <li class="submenu__item"><a href="" class="submenu__link"></a>REMERA</li>
+                    <li class="submenu__item"><a href="" class="submenu__link"></a>LLAVE</li>
+                </ul>
+            </il>
+            <li class="navbar__item"><a class="navbar__link" href="/contact">CONTACTO</a></il>
+            <li class="navbar__item"><a class="navbar__link" href="/auth/login">LOGIN</a></il>
+            <li class="navbar__item"><a class="navbar__cart" href="/shop/cart"><img src="img/icons/cart-icon.svg" alt="Carrito"></a></il>
+        </ul>
+    </nav>
+</header>

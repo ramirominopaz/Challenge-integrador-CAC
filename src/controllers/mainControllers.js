@@ -4,7 +4,11 @@ module.exports = {
  
     home:(req, res)=> {
         console.log('Estamos en home') 
-        res.send('Esta es la pagina de home')
+        res.render(path.resolve(__dirname, '../views/index'), {
+            view: {
+                title: "Home | Funkoshop"
+              }
+        });
     },
 
     contact:(req, res)=> {

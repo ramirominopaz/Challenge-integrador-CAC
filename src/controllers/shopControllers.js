@@ -4,12 +4,20 @@ module.exports = {
  
     shop:(req, res)=> {
         console.log('Estamos en home') 
-        res.send('Esta es la pagina de home')
+        res.render(path.resolve(__dirname, '../views/pages/shop'), {
+            view: {
+                title: "Shop | Funkoshop"
+              }
+        })
     },
 
     item:(req, res)=> {
         console.log('Estamos en item') 
-        res.send('Esta es la pagina de item')
+        res.render(path.resolve(__dirname, '../views/pages/item'), {
+             view: {
+                title: "Item | Funkoshop"
+            }
+        })
     },
 
     itemPost:(req, res)=> {
@@ -19,7 +27,11 @@ module.exports = {
 
     cart:(req, res)=> {
         console.log('Estamos en cart') 
-        res.send('Esta es la pagina de cart')
+        res.render(path.resolve(__dirname, '../views/pages/cart'), {
+            view: {
+                title: "Cart | Funkoshop"
+              }
+        })
     },
 
     cartPost:(req, res)=> {
