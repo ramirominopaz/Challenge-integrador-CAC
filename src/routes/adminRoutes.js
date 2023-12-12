@@ -1,6 +1,9 @@
 const express = require('express');
 const adminControllers = require('../controllers/adminControllers.js');
 const router = express.Router();
+const { isLogged } = require('../middlewares/login.js');
+
+router.use(isLogged);
 
 router.get('/', adminControllers.admin)
 

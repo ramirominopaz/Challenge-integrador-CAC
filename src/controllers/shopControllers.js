@@ -1,24 +1,36 @@
 const path = require('path')
+const ItemService = require('../services/itemService');
 
 module.exports = {
  
-    shop:(req, res)=> {
-        console.log('Estamos en home') 
-        res.render(path.resolve(__dirname, '../views/pages/shop'), {
-            view: {
-                title: "Shop | Funkoshop"
-              }
-        })
-    },
+    shop: async (req, res) => {
+        const items = await ItemService.getAllItems();
+        const { data } = items;
+        res.render(path.resolve(__dirname, '../views/pages/shop'),{
+          view: {
+            title: "Shop | Funkoshop"
+          },
+          items: data
+        });
+      },
 
-    item:(req, res)=> {
-        console.log('Estamos en item') 
+    item: async (req, res) => {
+        const id = req.params.id;
+        const item = await ItemService.getItem(id);
+        const { data } = item;
+    
+        if (!data[0]) {
+          res.status(404).send('El producto con el ID seleccionado no existe o fue eliminado');
+        }
+    
         res.render(path.resolve(__dirname, '../views/pages/item'), {
-             view: {
-                title: "Item | Funkoshop"
-            }
-        })
-    },
+          view: {
+            title: "Item | Funkoshop"
+          },
+          item: data[0],
+          enableGlide: true
+        });
+      },
 
     itemPost:(req, res)=> {
         console.log('Se hizo un Post en item') 
