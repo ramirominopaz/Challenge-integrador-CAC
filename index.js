@@ -13,9 +13,9 @@ const port = process.env.PORT || 3000
 server.set('view engine' , 'ejs');
 server.set('views', path.join(__dirname ,'./src/views' ));
 
-app.use(initSession());
+server.use(initSession());
 
-app.use((req, res, next) => {
+server.use((req, res, next) => {
   res.locals.isLogged = req.session.isLogged;
   next();
 });
