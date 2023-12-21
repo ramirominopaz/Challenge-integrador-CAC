@@ -70,8 +70,9 @@ const edit = async (params, id) => {
     const response = {
       isError: false,
       message: `El item fue modificado exitosamente.`,
-      status: rows
+      status: rows,
     };
+    console.log(params)
 
     return response;
   } catch (e) {

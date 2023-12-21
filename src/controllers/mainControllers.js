@@ -16,8 +16,12 @@ module.exports = {
 
     contact:(req, res)=> {
         console.log('Estamos en contact') 
-        res.send('Esta es la pagina de contacto')
-    },
+        res.render((path.resolve(__dirname, '../views/pages/contact')), {
+          view: {
+            title: "Contacto | Funkoshop"
+          },
+        });
+      },
 
     about:(req, res)=> {
         console.log('Estamos en about') 
