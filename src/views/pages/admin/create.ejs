@@ -1,5 +1,5 @@
 
-    <%- include('../../partials/headerAdmin'); -%>
+    <%- include('../../partials/header'); -%>
 
     <main id="create">
         <section class="create-item container">
@@ -8,7 +8,7 @@
             
             <div class="form">
 
-                <form action="" method="post">
+                <form action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
                 
                     <div class="form__block">
     
@@ -30,8 +30,8 @@
                   
                     <div class="form__block">
         
-                    <label class="form__label" for="item-name">Nombre del producto:</label>
-                    <input class="form__input" name="item-name" type="text" placeholder="Kakashi Hatake Naruto Shipuden Saga">
+                    <label class="form__label" for="name">Nombre del producto:</label>
+                    <input class="form__input" name="name" type="text" placeholder="Kakashi Hatake Naruto Shipuden Saga">
     
                     </div>
     
@@ -44,8 +44,8 @@
     
                     <div class="form__block">
     
-                        <label class="form__label" for="ska">SKA:</label>
-                        <input class="form__input" name="ska" id="ska" type="text" placeholder="SSK11AB001">
+                        <label class="form__label" for="sku">SKA:</label>
+                        <input class="form__input" name="sku" id="sku" type="text" placeholder="SSK11AB001">
         
                         <label class="form__label" for="price">Precio:</label>
                         <input class="form__input" name="price" id="price" type="number" placeholder="$0.000,00" min="1">
@@ -77,7 +77,7 @@
                     <div class="form__block">
     
                         <label class="form__label" for="image">Imagen:</label>
-                        <input class="form__input" name="image" id="image" type="file" multiple>
+                        <input class="form__input" name="images" id="image" type="file" multiple>
     
                     </div>
     
@@ -85,7 +85,7 @@
                     <div class="form__block">
     
                         <input class="submit-button" type="submit" value="Agregar Producto">
-                        <input class="reset-button" class="reset-button" type="reset" value="Limpiar">
+                        <input class="reset-button"  type="reset" value="Limpiar">
     
                     </div>
     

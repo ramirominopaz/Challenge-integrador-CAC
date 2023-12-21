@@ -8,7 +8,7 @@ const getItem = async (id) => {
   return await ItemModel.getOne({product_id: id});
 }
 
-const createItem = async (item, files) => {
+const createItem = async (item/*, files*/) => {
   const itemSchema = {
     product_name: item.name,
     product_description: item.description,
@@ -17,9 +17,9 @@ const createItem = async (item, files) => {
     discount: item.discount,
     sku: item.sku,
     dues: item.dues,
-    image_front: '/'+files[0].filename,
-    image_back: '/'+files[1].filename,
-    licence_id: item.collection,
+    image_front: '/branding/isotype.svg',
+    image_back: '/branding/isotype.svg',
+    licence_id: item.license,
     category_id: item.category
   }
   return await ItemModel.create([Object.values(itemSchema)]);
@@ -34,9 +34,9 @@ const editItem = async (item, id) => {
     discount: item.discount,
     sku: item.sku,
     dues: item.dues,
-    image_front: '/imagen_front',
-    image_back: '/imagen_front',
-    licence_id: item.collection,
+    image_front: '/branding/isotype.svg',
+    image_back: '/branding/isotype.svg',
+    licence_id: item.license,
     category_id: item.category
   }
 

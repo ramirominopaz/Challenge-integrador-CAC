@@ -1,9 +1,21 @@
 const path = require('path')
+const UserService = require('../services/userService');
+
+// const authModel = require('../models/authModel');
+
+// const userCredentials = async () => {
+//     return await authModel.getUser();
+//   }
+
+
+// const userCredentials = async ()=>{
+//     return await UserService.getAllUser();
+// }
 
 const userCredentials = {
-    email: 'usuario@gmail.com',
-    password: '1234'
-  }
+  email: "usuario@gmail.com",
+  password: "1234"
+}
 
 module.exports = {
  
@@ -17,7 +29,9 @@ module.exports = {
     },
 
     loginPost:(req, res)=> {
-        const { email, password } = req.body;
+
+        const email = req.body.mail
+        const password = req.body.password
         const emailValidation = userCredentials.email == email;
         const passwordValidation = userCredentials.password == password;
     
@@ -41,13 +55,43 @@ module.exports = {
     },
 
     registerPost:(req, res)=> {
-        console.log('Se hizo un Post en register') 
-        res.send('Esta es la pagina de register')
+      const name = req.body.name
+      const lastname = req.body.lastname
+      const email = req.body.mail
+      const password = req.body.password
+      const password_check = req.body.password__check
+
+      if (password == password_check){
+        console.log("Verificación correcta")
+      } else {
+        console.log("La contraseña no coincide")
+      }
+
     },
+
+    registerPost:async (req, res) => {
+      const password = req.body.password
+      const password_check = req.body.password__check
+      if (password == password_check) {
+        try{
+          const user = req.body;
+          await UserService.createUser(user);
+          console.log(req.body);
+          res.redirect('/login');
+        } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al crear un usuario nuevo');
+        }
+      } else {
+        res.send('Las contraseñas no coinciden')
+      }
+      
+    },
+
 
     logout:(req, res)=> {
         req.session.isLogged = false;
-        res.send('Sesión finalizada con éxito.')
+        res.redirect('/')
       },
 
 }

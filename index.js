@@ -5,10 +5,12 @@ const adminRoutes = require('./src/routes/adminRoutes.js')    //Aca se importan 
 const authRoutes = require('./src/routes/authRoutes.js')    //Aca se importan las rutas del Auth
 const shopRoutes = require('./src/routes/shopRoutes.js')    //Aca se importan las rutas del Shop
 const path = require('path')
+const methodOverride = require('method-override');
 const { initSession } = require('./src/utils/sessions');
 require('dotenv').config();
 const port = process.env.PORT || 3000
 
+server.use(express.static(__dirname + '/public'));
 
 server.set('view engine' , 'ejs');
 server.set('views', path.join(__dirname ,'./src/views' ));
@@ -20,7 +22,11 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use(express.static(__dirname + '/public'));
+server.use(express.urlencoded());
+server.use(express.json());
+
+server.use(methodOverride('_method'));
+
 server.use('/', mainRoutes); //Aca se le indica que use las rutas de Main 
 server.use('/admin', adminRoutes); //Aca se le indica que use las rutas de Admin
 server.use('/auth', authRoutes); //Aca se le indica que use las rutas de Auth
@@ -28,9 +34,6 @@ server.use('/shop', shopRoutes); //Aca se le indica que use las rutas de Shop
 
 server.use((req, res, next) => {res.status(404).send('Recurso no encontrado');}); //Aca se manejan los errores
 
-server.use(express.urlencoded());
-server.use(express.json());
-
 server.listen(3000, ()=>{
-    console.log("Escuchando en el puerto ${port}")
+    console.log(`Escuchando en el puerto ${port}`)
 })

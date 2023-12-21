@@ -1,5 +1,5 @@
 
-    <%- include('../../partials/headerAdmin'); -%>
+    <%- include('../../partials/header'); -%>
 
     <main id="admin" class="container">
 
@@ -11,7 +11,7 @@
         <div class="admin__list">
             <section class="admin__header">
                 <h2>LISTADO DE PRODUCTOS</h2>
-                <span>AGREGAR<a href="/create"><iconify-icon icon="bxs:plus-square" style="color: #f33;"></iconify-icon></a></span>
+                <span>AGREGAR<a href="/admin/create"><iconify-icon icon="bxs:plus-square" style="color: #f33;"></iconify-icon></a></span>
             </section>
     
             <section class="admin__table">
@@ -24,7 +24,7 @@
                 </div>
         
                 <% items.forEach(item => { %>
-                    <article class="admin-table__row">
+                    <article class="admin__table-row">
                         <p><%= item.product_id %></p>
                         <p><%= item.sku %></p>
                         <p><%= item.product_name %></p>

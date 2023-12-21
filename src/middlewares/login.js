@@ -3,7 +3,7 @@ const isLogged = (req, res, next) => {
      return next();
     }
   
-    return res.status(401).send('Necesitas estar logueado para ingresar');
+    return res.redirect('/auth/login');
   }
   
   module.exports = {

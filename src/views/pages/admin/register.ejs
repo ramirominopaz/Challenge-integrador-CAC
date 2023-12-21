@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | FunkShop</title>
-    <link rel="stylesheet" href="../../css/index.css">
-</head>
-<body>
 
-    <%- include('../../partials/headerAdmin'); -%>
+
+    <%- include('../../partials/header'); -%>
 
     <main id="register">
 
@@ -19,19 +11,19 @@
                 <form  method="post" id="register-form">
                     <div class="register-form">
                         <span class="register-form__label" for="r-name">Nombre:</span>
-                        <input class="register-form__input" type="text" name="r-name" required placeholder="Jhon"><br>
+                        <input class="register-form__input" type="text" name="name" required placeholder="Jhon"><br>
 
                         <span class="register-form__label" for="r-lastname">Apellido:</span>
-                        <input class="register-form__input" type="text" name="r-lastname" required placeholder="Doe"><br>
+                        <input class="register-form__input" type="text" name="lastname" required placeholder="Doe"><br>
 
                         <span class="register-form__label" for="r-email">Email:</span>
-                        <input class="register-form__input" type="email" name="r-email" required placeholder="jhondoe@correo.com"><br>
+                        <input class="register-form__input" type="email" name="email" required placeholder="jhondoe@correo.com"><br>
 
                         <span class="register-form__label" for="r-password">Contraseña:</span>
-                        <input class="register-form__input" type="password" name="r-password" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;""><br>       
+                        <input class="register-form__input" type="password" name="password" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;""><br>       
 
                         <span class="register-form__label" for="r-password__check">Repita Contraseña:</span>
-                        <input class="register-form__input" type="password" name="r-password__check" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                        <input class="register-form__input" type="password" name="password__check" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
                     </div>
                     <div class="register-submit">
                         <input type="submit" value="Registrarse" form="register-form">

@@ -1,5 +1,5 @@
 
-    <%- include('../partials/headerShop'); -%>
+    <%- include('../partials/header'); -%>
 
     <main class="main-shop container">
         <aside class="shop__filters filters">
@@ -55,8 +55,8 @@
                             <a class="card-item__link" href="/shop/item/<%= item.product_id%>">
                                 <picture class="card-item__cover">
                                     <span class="card-item__tag">Nuevo</span>
-                                    <img class="card-item__img--front" src="../../img<%= item.image_front%>" alt="Figura coleccionable Funko de un Stormtrooper">
-                                    <img class="card-item__img--back" src="../../img<%= item.image_back%>" alt="Figura coleccionable Funko de un Stormtrooper en caja">
+                                    <img class="card-item__img--front" src="../../img<%= item.image_front%>" alt="Figura coleccionable Funko de <%= item.product_name%>">
+                                    <img class="card-item__img--back" src="../../img<%= item.image_back%>" alt="Figura coleccionable Funko de <%= item.product_name%> en caja">
                                 </picture>
                                 <div class="card-item__content">
                                     <p class="card-item__licence"><%= item.licence_name%></p>

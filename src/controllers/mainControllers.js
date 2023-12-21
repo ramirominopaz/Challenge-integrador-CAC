@@ -2,15 +2,7 @@ const path = require('path')
 const LicenceService = require('../services/licenseService');
 
 module.exports = {
- 
-    // home:(req, res)=> {
-    //     console.log('Estamos en home') 
-    //     res.render(path.resolve(__dirname, '../views/index'), {
-    //         view: {
-    //             title: "Home | Funkoshop"
-    //           }
-    //     });
-    // },
+
 
     home: async (req, res) => {
         const licences = await LicenceService.getAllItemsLicences();
