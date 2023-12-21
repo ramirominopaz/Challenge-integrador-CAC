@@ -17,8 +17,8 @@ const createItem = async (item/*, files*/) => {
     discount: item.discount,
     sku: item.sku,
     dues: item.dues,
-    image_front: '/branding/isotype.svg',
-    image_back: '/branding/isotype.svg',
+    image_front: '/branding/comingsoon.jpg',
+    image_back: '/branding/comingsoon.jpg',
     licence_id: item.license,
     category_id: item.category
   }
@@ -34,8 +34,8 @@ const editItem = async (item, id) => {
     discount: item.discount,
     sku: item.sku,
     dues: item.dues,
-    image_front: '/branding/isotype.svg',
-    image_back: '/branding/isotype.svg',
+    image_front: '/branding/comingsoon.jpg',
+    image_back: '/branding/comingsoon.jpg',
     licence_id: item.license,
     category_id: item.category
   }
